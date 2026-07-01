@@ -1,6 +1,6 @@
 site_name: ÁgoraLab
 site_description: Um blog pessoal sobre tecnologia e outras ideias
-site_url: https://luciodias.github.io/blog
+site_url: https://luciodias.github.io/agoralab
 
 theme:
   name: material
