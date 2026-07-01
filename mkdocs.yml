@@ -5,6 +5,10 @@ site_url: https://luciodias.github.io/blog
 theme:
   name: material
   language: pt-BR
+  palette:
+    scheme: slate
+    primary: green
+    accent: green
   features:
     - navigation.indexes
 
@@ -38,6 +42,9 @@ extra:
     - icon: fontawesome/brands/github
       name: luciodias no GitHub
       link: https://github.com/luciodias
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 hooks:
   - hooks/socialmedia.py
