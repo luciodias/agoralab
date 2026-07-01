@@ -4,6 +4,7 @@ site_url: https://luciodias.github.io/blog
 
 theme:
   name: material
+  language: pt-BR
   features:
     - navigation.indexes
 
