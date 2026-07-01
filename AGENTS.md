@@ -17,8 +17,8 @@ poetry run mkdocs build
 
 - `mkdocs.yml` — MkDocs config (single top-level config, blog em pt-BR)
 - `docs/` — Markdown source content (páginas, posts, autor, tags)
-- `ext/slugs.py` — Slugify personalizado com suporte a pt-BR
-- `hooks/socialmedia.py` — Botões de compartilhar no final dos posts
+- `ext/slugs.py` — Slugify personalizado com suporte a pt-BR, carregado via hook
+- `hooks/socialmedia.py` — Slugify hook + botões de compartilhar no final dos posts
 - `pyproject.toml` — Poetry-managed Python project (requires >=3.14)
 - `tests/` — empty (no test framework configured)
 - `opencode.json` — OpenCode project config (LSP enabled)

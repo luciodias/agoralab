@@ -1,6 +1,19 @@
+import sys
+import os
 from textwrap import dedent
 import urllib.parse
 import re
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+from ext.slugs import slugify
+
+def on_pre_build(config):
+    for plugin in config.plugins:
+        if plugin.__class__.__name__ == "BlogPlugin":
+            plugin.config.post_slugify = slugify(short=True)
+            break
+    return config
+
 
 x_intent = "https://twitter.com/intent/tweet"
 fb_sharer = "https://www.facebook.com/sharer/sharer.php"
