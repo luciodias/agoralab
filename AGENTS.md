@@ -19,6 +19,13 @@ poetry run mkdocs build
 - `docs/` — Markdown source content (páginas, posts, autor, tags)
 - `ext/slugs.py` — Slugify personalizado com suporte a pt-BR, carregado via hook
 - `hooks/socialmedia.py` — Slugify hook + botões de compartilhar no final dos posts
-- `pyproject.toml` — Poetry-managed Python project (requires >=3.14)
+- `pyproject.toml` — Poetry-managed Python project (requires >=3.14), `package-mode = false`
+- `.github/workflows/deploy.yml` — GitHub Actions: deploy automático no push pra `main`
 - `tests/` — empty (no test framework configured)
 - `opencode.json` — OpenCode project config (LSP enabled)
+
+## GitHub Pages
+
+- Repositório: `github.com/luciodias/agoralab`
+- URL: `https://luciodias.github.io/agoralab/`
+- Deploy automático via GitHub Actions em cada push pra `main`
