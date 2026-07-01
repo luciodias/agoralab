@@ -18,6 +18,7 @@ plugins:
         - Viagens
         - Pessoal
       authors_profiles: true
+      authors_profiles_name: Autores
       pagination_per_page: 5
       archive_pagination_per_page: 10
       categories_pagination_per_page: 10
