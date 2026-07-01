@@ -4,11 +4,16 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - run: pipx install poetry
       - uses: actions/setup-python@v5
         with:
@@ -16,3 +21,5 @@ jobs:
           cache: poetry
       - run: poetry install
       - run: poetry run mkdocs gh-deploy --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
