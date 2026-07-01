@@ -12,6 +12,8 @@ dependencies = [
     "mkdocs-rss-plugin (>=1.17,<2.0)"
 ]
 
+[tool.poetry]
+package-mode = false
 
 [tool.ruff]
 line-length = 100
