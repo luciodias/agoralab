@@ -6,9 +6,20 @@ theme:
   name: material
   language: pt-BR
   palette:
-    scheme: slate
-    primary: green
-    accent: green
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+      primary: teal
+      accent: green
+      
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Mode escuro
+      primary: teal
+      accent: green
+
   features:
     - navigation.indexes
 
