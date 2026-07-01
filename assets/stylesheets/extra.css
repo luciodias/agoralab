@@ -1,0 +1,13 @@
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--secondary {
+    order: 0;
+  }
+  [dir=ltr] .md-sidebar--primary:not([hidden])~.md-content>.md-content__inner {
+    margin-left: 0;
+    margin-right: 1.2rem;
+  }
+  [dir=ltr] .md-sidebar--secondary:not([hidden])~.md-content>.md-content__inner {
+    margin-right: 0;
+    margin-left: 1.2rem;
+  }
+}
