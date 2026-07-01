@@ -35,6 +35,9 @@ plugins:
         as_update: date.updated
 
 extra:
+  analytics:
+    provider: google
+    property: G-VY4RDYYYPJ
   social:
     - icon: fontawesome/brands/github
       name: luciodias no GitHub
