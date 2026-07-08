@@ -952,34 +952,35 @@
 
 <h2 id="o-que-e-o-termux">O que é o Termux</h2>
 <p>Termux é um emulador de terminal para Android que também fornece um ambiente Linux mínimo. Ele não precisa de root e dá acesso a um gerenciador de pacotes (APT), shell Bash, Python, Git, SSH e centenas de outras ferramentas nativas. Basicamente, transforma seu celular num ambiente de desenvolvimento portátil.</p>
-<p>A instalação é simples: baixe o APK pelo <a href="https://f-droid.org/packages/com.termux/">F-Droid</a> (recomendado, versão mais atualizada) ou pelo GitHub. Depois de abrir, rode:</p>
-<pre><code class="language-bash">pkg update &amp;&amp; pkg upgrade
-pkg install python git
-</code></pre>
+<p>A instalação é simples: baixe o APK pelo <a href="https://f-droid.org/packages/com.termux/">F-Droid</a> ou pelo GitHub. Depois de abrir, rode:</p>
+<div class="highlight"><pre><span></span><code>pkg<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pkg<span class="w"> </span>upgrade
+pkg<span class="w"> </span>install<span class="w"> </span>python<span class="w"> </span>git
+</code></pre></div>
 <p>Pronto: você já tem Python e Git funcionando.</p>
 <h2 id="por-que-o-proot-distro-e-necessario">Por que o proot-distro é necessário</h2>
 <p>O Termux tem uma limitação importante: por questões de segurança do Android (SELinux, isolamento de processos), ele não consegue acessar certas chamadas de sistema que programas comuns esperam. Isso significa que algumas ferramentas podem falhar ou se comportar de forma inesperada.</p>
 <p>O <strong>proot-distro</strong> resolve isso. Ele usa <code>proot</code> para simular um ambiente chroot sem precisar de root. Com ele, você instala distribuições Linux completas (Ubuntu, Debian, Arch) dentro do Termux, com acesso a chamadas de sistema reais e um sistema de arquivos isolado.</p>
 <p>Para instalar:</p>
-<pre><code class="language-bash">pkg install proot-distro
-proot-distro install ubuntu
-proot-distro sh ubuntu --isolated
-</code></pre>
-<p>???+ warning ""</p>
-<pre><code>O uso do parâmetro `#!bash --isolated` elimina o mapeamento de diretórios do Termux.
-Isso pode contribuir com sua segurança, pois dificulta o acesso da IA aos dados do celular.
-</code></pre>
+<div class="highlight"><pre><span></span><code>pkg<span class="w"> </span>install<span class="w"> </span>proot-distro
+proot-distro<span class="w"> </span>install<span class="w"> </span>ubuntu
+proot-distro<span class="w"> </span>sh<span class="w"> </span>ubuntu<span class="w"> </span>--isolated
+</code></pre></div>
+<details class="warning" open="open">
+<summary></summary>
+<p>O uso do parâmetro <code>--isolated</code> elimina o mapeamento de diretórios do Termux.
+Isso pode contribuir com sua segurança, pois dificulta o acesso da IA aos dados do celular.</p>
+</details>
 <p>Dentro da distro, você tem um ambiente Ubuntu praticamente completo. É lá que o OpenCode roda sem problemas de compatibilidade.</p>
 <h2 id="instalando-o-opencode">Instalando o OpenCode</h2>
 <p>Dentro do Ubuntu via proot-distro, instale com o instalador oficial:</p>
-<pre><code class="language-bash">apt update &amp;&amp; apt upgrade -y
-apt install curl -y
-curl -fsSL https://opencode.ai/install | bash
-</code></pre>
+<div class="highlight"><pre><span></span><code>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>-y
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://opencode.ai/install<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
 <p>Depois é só usar:</p>
-<pre><code class="language-bash">opencode
-</code></pre>
-<p><img alt="print do OpenCode rodando no Termux" src="../../../../../assets/img/opencode_termux.jpeg" width="200" />/</p>
+<p><div class="highlight"><pre><span></span><code>opencode
+</code></pre></div>
+<img alt="print do OpenCode rodando no Termux" src="../../../../../assets/img/opencode_termux.jpeg" width="200" />/</p>
 <h2 id="modelos-gratuitos">Modelos gratuitos</h2>
 <p>O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cadastro ou cartão de crédito. Os modelos gratuitos variam com o tempo, mas os disponíveis na publicação do post são:</p>
 <ul>
