@@ -26,7 +26,7 @@ O OpenCode é um assistente de programação via terminal que roda direto no CLI
 
 Termux é um emulador de terminal para Android que também fornece um ambiente Linux mínimo. Ele não precisa de root e dá acesso a um gerenciador de pacotes (APT), shell Bash, Python, Git, SSH e centenas de outras ferramentas nativas. Basicamente, transforma seu celular num ambiente de desenvolvimento portátil.
 
-A instalação é simples: baixe o APK pelo [F-Droid](https://f-droid.org/packages/com.termux/) (recomendado, versão mais atualizada) ou pelo GitHub. Depois de abrir, rode:
+A instalação é simples: baixe o APK pelo [F-Droid](https://f-droid.org/packages/com.termux/) ou pelo GitHub. Depois de abrir, rode:
 
 ```bash
 pkg update && pkg upgrade
@@ -50,7 +50,7 @@ proot-distro sh ubuntu --isolated
 ```
 ???+ warning ""
 
-    O uso do parâmetro `#!bash --isolated` elimina o mapeamento de diretórios do Termux.
+    O uso do parâmetro `--isolated` elimina o mapeamento de diretórios do Termux.
     Isso pode contribuir com sua segurança, pois dificulta o acesso da IA aos dados do celular.
 
 
