@@ -766,6 +766,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modelos-gratuitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos gratuitos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#como-e-a-experiencia-no-dia-a-dia" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -865,7 +876,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min de leitura
+                              8 min de leitura
                             
                           </span>
                         </div>
@@ -949,14 +960,24 @@ proot-distro login ubuntu
 </code></pre>
 <p>Dentro da distro, você tem um ambiente Ubuntu praticamente completo. É lá que o OpenCode roda sem problemas.</p>
 <h2 id="instalando-o-opencode">Instalando o OpenCode</h2>
-<p>Dentro do Ubuntu via proot-distro:</p>
+<p>Dentro do Ubuntu via proot-distro, instale com o instalador oficial:</p>
 <pre><code class="language-bash">apt update &amp;&amp; apt upgrade -y
-apt install python3 python3-pip git -y
-pip install opencode
+apt install curl -y
+curl -fsSL https://opencode.ai/install | bash
 </code></pre>
 <p>Depois é só usar:</p>
 <pre><code class="language-bash">opencode
 </code></pre>
+<h2 id="modelos-gratuitos">Modelos gratuitos</h2>
+<p>O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cartão de crédito. Os modelos gratuitos disponíveis são:</p>
+<ul>
+<li><strong>Big Pickle</strong> — modelo da própria equipe do OpenCode</li>
+<li><strong>DeepSeek V4 Flash Free</strong></li>
+<li><strong>MiMo-V2.5 Free</strong></li>
+<li><strong>North Mini Code Free</strong></li>
+<li><strong>Nemotron 3 Ultra Free</strong> (NVIDIA)</li>
+</ul>
+<p>Basta rodar <code>/connect</code> no TUI, selecionar OpenCode Zen, criar uma conta em opencode.ai/auth e começar a usar. Para ver a lista completa de modelos disponíveis, use <code>/models</code>.</p>
 <h2 id="como-e-a-experiencia-no-dia-a-dia">Como é a experiência no dia a dia</h2>
 <p>A session típica funciona assim:</p>
 <ol>
