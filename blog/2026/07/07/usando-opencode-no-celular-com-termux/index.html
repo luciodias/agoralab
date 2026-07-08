@@ -579,14 +579,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/tecnologia/" class="md-nav__link">
+      <a href="../../../../category/termux/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tecnologia
+    Termux
   
 
     
@@ -865,7 +865,7 @@
                           <span class="md-ellipsis">
                             em
                             
-                              <a href="../../../../category/tecnologia/">Tecnologia</a></span>
+                              <a href="../../../../category/termux/">Termux</a></span>
                         </div>
                       </li>
                     
@@ -899,6 +899,13 @@
 
 
   <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../../tags/#tag:android" class="md-tag">android</a>
+      
     
       
       
@@ -949,16 +956,20 @@
 <pre><code class="language-bash">pkg update &amp;&amp; pkg upgrade
 pkg install python git
 </code></pre>
-<p>Pronto. Você já tem Python e Git funcionando.</p>
+<p>Pronto: você já tem Python e Git funcionando.</p>
 <h2 id="por-que-o-proot-distro-e-necessario">Por que o proot-distro é necessário</h2>
 <p>O Termux tem uma limitação importante: por questões de segurança do Android (SELinux, isolamento de processos), ele não consegue acessar certas chamadas de sistema que programas comuns esperam. Isso significa que algumas ferramentas podem falhar ou se comportar de forma inesperada.</p>
 <p>O <strong>proot-distro</strong> resolve isso. Ele usa <code>proot</code> para simular um ambiente chroot sem precisar de root. Com ele, você instala distribuições Linux completas (Ubuntu, Debian, Arch) dentro do Termux, com acesso a chamadas de sistema reais e um sistema de arquivos isolado.</p>
 <p>Para instalar:</p>
 <pre><code class="language-bash">pkg install proot-distro
 proot-distro install ubuntu
-proot-distro login ubuntu
+proot-distro sh ubuntu --isolated
 </code></pre>
-<p>Dentro da distro, você tem um ambiente Ubuntu praticamente completo. É lá que o OpenCode roda sem problemas.</p>
+<p>???+ warning ""</p>
+<pre><code>O uso do parâmetro `#!bash --isolated` elimina o mapeamento de diretórios do Termux.
+Isso pode contribuir com sua segurança, pois dificulta o acesso da IA aos dados do celular.
+</code></pre>
+<p>Dentro da distro, você tem um ambiente Ubuntu praticamente completo. É lá que o OpenCode roda sem problemas de compatibilidade.</p>
 <h2 id="instalando-o-opencode">Instalando o OpenCode</h2>
 <p>Dentro do Ubuntu via proot-distro, instale com o instalador oficial:</p>
 <pre><code class="language-bash">apt update &amp;&amp; apt upgrade -y
@@ -968,8 +979,9 @@ curl -fsSL https://opencode.ai/install | bash
 <p>Depois é só usar:</p>
 <pre><code class="language-bash">opencode
 </code></pre>
+<p><img alt="print do OpenCode rodando no Termux" src="../../../../../assets/img/opencode_termux.jpeg" /></p>
 <h2 id="modelos-gratuitos">Modelos gratuitos</h2>
-<p>O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cartão de crédito. Os modelos gratuitos disponíveis são:</p>
+<p>O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cadastro ou cartão de crédito. Os modelos gratuitos variam com o tempo, mas os disponíveis na publicação do post são:</p>
 <ul>
 <li><strong>Big Pickle</strong> — modelo da própria equipe do OpenCode</li>
 <li><strong>DeepSeek V4 Flash Free</strong></li>
@@ -977,9 +989,10 @@ curl -fsSL https://opencode.ai/install | bash
 <li><strong>North Mini Code Free</strong></li>
 <li><strong>Nemotron 3 Ultra Free</strong> (NVIDIA)</li>
 </ul>
-<p>Basta rodar <code>/connect</code> no TUI, selecionar OpenCode Zen, criar uma conta em opencode.ai/auth e começar a usar. Para ver a lista completa de modelos disponíveis, use <code>/models</code>.</p>
+<p>Os modelos gratuitos possuem limitações de requisições e tokens diários, mas são suficientes para experimentar a ferramenta e tarefas de código e/ou escrita básicas.</p>
+<p>Para rodar modelos de outros provedores, use o comando <code>/connect</code> para configurar sua própria chave para a maioria das empresas e modelos do mercado. Para ver a lista completa de modelos disponíveis, use <code>/models</code>.</p>
 <h2 id="como-e-a-experiencia-no-dia-a-dia">Como é a experiência no dia a dia</h2>
-<p>A session típica funciona assim:</p>
+<p>Uma sessão típica funciona assim:</p>
 <ol>
 <li>Abra o Termux</li>
 <li>Rode <code>proot-distro login ubuntu</code></li>
