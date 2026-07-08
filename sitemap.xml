@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://luciodias.github.io/agoralab/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://luciodias.github.io/agoralab/tags/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://luciodias.github.io/agoralab/blog/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://luciodias.github.io/agoralab/blog/tags/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://luciodias.github.io/agoralab/blog/author/luciodias/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://luciodias.github.io/agoralab/blog/2026/07/01/bem-vindo-ao-agoralab/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://luciodias.github.io/agoralab/blog/2026/07/07/usando-opencode-no-celular-com-termux/</loc>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://luciodias.github.io/agoralab/blog/archive/2026/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
+    </url>
+    <url>
+         <loc>https://luciodias.github.io/agoralab/blog/category/tecnologia/</loc>
+         <lastmod>2026-07-08</lastmod>
     </url>
     <url>
          <loc>https://luciodias.github.io/agoralab/blog/category/pessoal/</loc>
-         <lastmod>2026-07-01</lastmod>
+         <lastmod>2026-07-08</lastmod>
     </url>
 </urlset>
