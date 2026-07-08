@@ -71,7 +71,7 @@ Depois é só usar:
 ```bash
 opencode
 ```
-![print do OpenCode rodando no Termux](<../../assets/img/opencode_termux.jpeg>)
+![print do OpenCode rodando no Termux](<../../assets/img/opencode_termux.jpeg>){ width="200" }/
 ## Modelos gratuitos
 
 O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cadastro ou cartão de crédito. Os modelos gratuitos variam com o tempo, mas os disponíveis na publicação do post são:
