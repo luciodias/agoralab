@@ -30,7 +30,9 @@ plugins:
       archive_date_format: MMMM yyyy
       categories_allowed:
         - Tecnologia
-        - Viagens
+        - Termux
+        - Python
+        - Microcontroladores
         - Pessoal
       authors_profiles: true
       authors_profiles_name: Autores
