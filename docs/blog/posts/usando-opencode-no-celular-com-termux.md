@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-07-07
-readtime: 6
+readtime: 8
 categories:
   - Tecnologia
 tags:
@@ -52,12 +52,12 @@ Dentro da distro, você tem um ambiente Ubuntu praticamente completo. É lá que
 
 ## Instalando o OpenCode
 
-Dentro do Ubuntu via proot-distro:
+Dentro do Ubuntu via proot-distro, instale com o instalador oficial:
 
 ```bash
 apt update && apt upgrade -y
-apt install python3 python3-pip git -y
-pip install opencode
+apt install curl -y
+curl -fsSL https://opencode.ai/install | bash
 ```
 
 Depois é só usar:
@@ -65,6 +65,18 @@ Depois é só usar:
 ```bash
 opencode
 ```
+
+## Modelos gratuitos
+
+O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cartão de crédito. Os modelos gratuitos disponíveis são:
+
+- **Big Pickle** — modelo da própria equipe do OpenCode
+- **DeepSeek V4 Flash Free**
+- **MiMo-V2.5 Free**
+- **North Mini Code Free**
+- **Nemotron 3 Ultra Free** (NVIDIA)
+
+Basta rodar `/connect` no TUI, selecionar OpenCode Zen, criar uma conta em opencode.ai/auth e começar a usar. Para ver a lista completa de modelos disponíveis, use `/models`.
 
 ## Como é a experiência no dia a dia
 
