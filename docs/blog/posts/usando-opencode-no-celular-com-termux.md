@@ -3,13 +3,14 @@ date:
   created: 2026-07-07
 readtime: 8
 categories:
-  - Tecnologia
+  - Termux
 tags:
   - opencode
   - termux
   - proot-distro
   - linux
   - celular
+  - android
 authors:
   - luciodias
 slug: usando-opencode-no-celular-com-termux
@@ -32,7 +33,7 @@ pkg update && pkg upgrade
 pkg install python git
 ```
 
-Pronto. Você já tem Python e Git funcionando.
+Pronto: você já tem Python e Git funcionando.
 
 ## Por que o proot-distro é necessário
 
@@ -45,10 +46,15 @@ Para instalar:
 ```bash
 pkg install proot-distro
 proot-distro install ubuntu
-proot-distro login ubuntu
+proot-distro sh ubuntu --isolated
 ```
+???+ warning ""
 
-Dentro da distro, você tem um ambiente Ubuntu praticamente completo. É lá que o OpenCode roda sem problemas.
+    O uso do parâmetro `#!bash --isolated` elimina o mapeamento de diretórios do Termux.
+    Isso pode contribuir com sua segurança, pois dificulta o acesso da IA aos dados do celular.
+
+
+Dentro da distro, você tem um ambiente Ubuntu praticamente completo. É lá que o OpenCode roda sem problemas de compatibilidade.
 
 ## Instalando o OpenCode
 
@@ -65,10 +71,10 @@ Depois é só usar:
 ```bash
 opencode
 ```
-
+![print do OpenCode rodando no Termux](<../../assets/img/opencode_termux.jpeg>)
 ## Modelos gratuitos
 
-O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cartão de crédito. Os modelos gratuitos disponíveis são:
+O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, com limites generosos de uso. Você pode começar a usar imediatamente sem precisar de cadastro ou cartão de crédito. Os modelos gratuitos variam com o tempo, mas os disponíveis na publicação do post são:
 
 - **Big Pickle** — modelo da própria equipe do OpenCode
 - **DeepSeek V4 Flash Free**
@@ -76,11 +82,13 @@ O OpenCode oferece uma série de modelos gratuitos para teste via OpenCode Zen, 
 - **North Mini Code Free**
 - **Nemotron 3 Ultra Free** (NVIDIA)
 
-Basta rodar `/connect` no TUI, selecionar OpenCode Zen, criar uma conta em opencode.ai/auth e começar a usar. Para ver a lista completa de modelos disponíveis, use `/models`.
+Os modelos gratuitos possuem limitações de requisições e tokens diários, mas são suficientes para experimentar a ferramenta e tarefas de código e/ou escrita básicas.
+
+Para rodar modelos de outros provedores, use o comando `/connect` para configurar sua própria chave para a maioria das empresas e modelos do mercado. Para ver a lista completa de modelos disponíveis, use `/models`.
 
 ## Como é a experiência no dia a dia
 
-A session típica funciona assim:
+Uma sessão típica funciona assim:
 
 1. Abra o Termux
 2. Rode `proot-distro login ubuntu`
